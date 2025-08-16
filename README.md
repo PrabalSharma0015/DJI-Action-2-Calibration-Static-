@@ -1,37 +1,35 @@
-# 🎥 DJI Action 2 Camera Calibration (Static)
+# Static Camera Calibration (DJI Action 2)
 
-This repository contains my work on **camera calibration** using the **DJI Action 2** with **static chessboard images**, implemented in **OpenCV**.  
+## 📖 Overview
+This project demonstrates **static camera calibration** using OpenCV on captured images from the DJI Action 2 camera.  
+It estimates the intrinsic camera parameters and distortion coefficients using multiple chessboard images taken at different angles and positions.  
 
-## 🔧 What’s Inside
-- Captured multiple chessboard images from the DJI Action 2.  
-- Detected calibration pattern corners using OpenCV.  
-- Computed:  
-  - **Camera Matrix (Intrinsic Parameters)**  
-  - **Distortion Coefficients**  
-  - **Focal Lengths**  
-- Compared my results with **DJI’s official camera specifications**.  
-- Learned why calibration outputs may slightly differ due to:  
-  - Sensor assumptions  
-  - Field of View (FoV)  
-  - Lens distortions  
+## ⚙️ Features
+- Works with pre-captured images  
+- Detects chessboard corners across multiple frames  
+- Calculates intrinsic matrix and distortion coefficients  
+- Undistorts images for accurate visual output  
+- Reliable for fixed setups where camera position remains constant  
 
-## 📌 Why It Matters
-Accurate camera calibration is the **foundation of AR/VR, robotics, simulations, and computer vision tasks**. This exercise gave me practical insight into how real-world hardware connects with vision algorithms.  
+## 🚀 Why This Matters
+Static calibration is ideal for applications where the camera setup does not change.  
+It provides accurate distortion correction, crucial for **AR/VR, simulations, mapping, and photogrammetry**.  
 
-## 🚀 How to Use
-1. Clone the repo or open the Jupyter/Colab notebook.  
-2. Run the cells step by step.  
-3. Upload your own chessboard images (or use the sample dataset).  
-4. View calibration results and compare with manufacturer values.  
+## 🛠️ Technologies Used
+- Python  
+- OpenCV  
+- Numpy  
+- Jupyter/Google Colab  
 
-## 📊 Results (Sample)
-| Parameter               | Calculated (from OpenCV) | Manufacturer Specs |  
-|--------------------------|--------------------------|---------------------|  
-| Focal Length (fx, fy)   | ~X.XX, ~Y.YY             | Official DJI Value |  
-| Principal Point (cx, cy)| ~X.XX, ~Y.YY             | Official DJI Value |  
-| Distortion Coefficients | [k1, k2, p1, p2, k3]     | N/A (not provided) |  
+## 📷 Workflow
+1. Load chessboard images captured from DJI Action 2  
+2. Detect chessboard corners across multiple images  
+3. Compute camera intrinsic parameters & distortion coefficients  
+4. Apply undistortion on test images  
+5. Validate accuracy against real-world measurements  
 
-*(Values are approximate and depend on dataset used)*  
+## 🙏 Acknowledgment
+Special thanks to **Dr. Piyush Singh** for his constant guidance and support in completing this work.  
 
-## 🙏 Acknowledgement
-A big thanks to my mentor **Dr. Piyush Singh** for his guidance and motivation throughout this learning journey.
+---
+#ComputerVision #OpenCV #AR #VR #Calibration #ImageProcessing #DJIAction2 #UnrealEngine
